@@ -83,6 +83,6 @@ app.all("*", (req, res) => {
   res.status(400).json({ message: "Cette route n'existe pas" });
 });
 
-app.listen(3200, () => {
+app.listen(process.env.PORT || 3200, () => {
   console.log("Server started 🚀");
 });
